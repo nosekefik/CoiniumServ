@@ -154,7 +154,12 @@
     <Compile Include="Accounts\IAccountManager.cs" />
     <Compile Include="Algorithms\HashAlgorithmStatistics.cs" />
     <Compile Include="Algorithms\IHashAlgorithmStatistics.cs" />
+    <Compile Include="Algorithms\Implementations\Keccakc.cs" />
+    <Compile Include="Algorithms\Implementations\PHI1612.cs" />
     <Compile Include="Algorithms\Implementations\ScryptN.cs" />
+    <Compile Include="Algorithms\Implementations\Skunk.cs" />
+    <Compile Include="Algorithms\Implementations\Tribus.cs" />
+    <Compile Include="Algorithms\Implementations\X11Gost.cs" />
     <Compile Include="Blocks\BlockProcessor.cs" />
     <Compile Include="Blocks\IBlockProcessor.cs" />
     <Compile Include="Coin\Address\Exceptions\AddressNotOwnedException.cs" />

@@ -41,7 +41,9 @@ namespace CoiniumServ.Algorithms
         public const string Fugue = "fugue";
         public const string Groestl = "groestl";
         public const string Keccak = "keccak";
+        public const string Keccakc = "keccakc"; //Creative Coin
         public const string Nist5 = "nist5";
+        public const string PHI1612 = "phi";
         public const string Qubit = "qubit";
         public const string Scrypt = "scrypt";
         public const string ScryptOg = "scrypt-og";
@@ -50,7 +52,10 @@ namespace CoiniumServ.Algorithms
         public const string Sha256 = "sha256";
         public const string Shavite3 = "shavite3";
         public const string Skein = "skein";
+        public const string Skunk = "skunk";
+        public const string Tribus = "tribus";
         public const string X11 = "x11";
+        public const string X11Gost = "x11gost";
         public const string X13 = "x13";
         public const string X14 = "x14";
         public const string X15 = "x15";
@@ -91,6 +96,12 @@ namespace CoiniumServ.Algorithms
             _applicationContext.Container.Register<IHashAlgorithm, X15>(X15).AsMultiInstance();
             _applicationContext.Container.Register<IHashAlgorithm, X17>(X17).AsMultiInstance();
 
+            // custom algos added by anorganix
+            _applicationContext.Container.Register<IHashAlgorithm, PHI1612>(PHI1612).AsMultiInstance();
+            _applicationContext.Container.Register<IHashAlgorithm, Skunk>(Skunk).AsMultiInstance();
+            _applicationContext.Container.Register<IHashAlgorithm, Tribus>(Tribus).AsMultiInstance();
+            _applicationContext.Container.Register<IHashAlgorithm, X11Gost>(X11Gost).AsMultiInstance();
+
             // misc ones           
             _applicationContext.Container.Register<IHashAlgorithm, Blake>(Blake).AsMultiInstance();
             _applicationContext.Container.Register<IHashAlgorithm, Fresh>(Fresh).AsMultiInstance();
@@ -101,6 +112,9 @@ namespace CoiniumServ.Algorithms
             _applicationContext.Container.Register<IHashAlgorithm, Qubit>(Qubit).AsMultiInstance();
             _applicationContext.Container.Register<IHashAlgorithm, Shavite3>(Shavite3).AsMultiInstance();
             _applicationContext.Container.Register<IHashAlgorithm, Skein>(Skein).AsMultiInstance();
+
+            // custom algos added by anorganix
+            _applicationContext.Container.Register<IHashAlgorithm, Keccakc>(Keccakc).AsMultiInstance();
         }
     }
 }
